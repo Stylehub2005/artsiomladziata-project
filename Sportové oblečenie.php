@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,200&display=swap" rel="stylesheet">
     <title>Mirillisshop.sk</title>
 </head>
-trtes
+
 <body>
 <?php include 'parts/header.php'?>
     <main>
