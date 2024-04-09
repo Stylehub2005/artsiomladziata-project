@@ -15,14 +15,14 @@
 
 <body>
     <header>
-        <a href="index.html"><img class="graficlogo" src="img/logo/logo.png" alt="logo"></a>
+        <a href="index.php"><img class="graficlogo" src="img/logo/logo.png" alt="logo"></a>
         <input type="checkbox" id="nav-toggle" class="nav-toggle">
         <nav>
             <ul>
-                <li><a href="./index.html" target="_blank">HOME</a></li>
-                <li><a href="./O nas.html" target="_blank">BLOG</a></li>
-                <li><a href="./Sportové oblečenie.html" target="_blank"> ROZSAH</a></li>
-                <li><a href="./reg.html" target="_blank">REGISTRATION</a></li>
+                <li><a href="index.php" target="_blank">HOME</a></li>
+                <li><a href="O%20nas.php" target="_blank">BLOG</a></li>
+                <li><a href="Sportové oblečenie.php" target="_blank"> ROZSAH</a></li>
+                <li><a href="reg.php" target="_blank">REGISTRATION</a></li>
             </ul>
         </nav>
         <label for="nav-toggle" class="nav-toggle-label">
@@ -153,24 +153,7 @@
 
 
     </main>
-    <footer>
-        <div class="footer-nav">
-            <a href="index.html">HOME</a>
-            <a href="O nas.html">BLOG</a>
-            <a href="Sportové oblečenie.html">ROZSAH</a>
-            <a href="reg.html">REGISTRATION</a>
-        </div>
-        <div class="logo">
-            <a href="index.html"><img src="img/logo/logo.png"></a>
-        </div>
-        <div class="social">
-            <a href="#"><img src="img/image/m_1e61cef7d9.jpg"></a>
-            <a href="#"><img src="img/image/m_2f6ce99aa8.jpg"></a>
-            <a href="#"><img src="img/image/m_f016f1a07c.jpg"></a>
-            <a href="#"><img src="img/image/m_f8a463e0c3.jpg"></a>
-        </div>
-        <p>Artsiom Ladziata 2023</p>
-    </footer>
+    <?php include 'parts/footer.php'?>
 
 
 

@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-fdsfsdsda
-s
 
 
 <head>
@@ -14,22 +12,12 @@ s
 
 </head>
 
+
 <body>
-    <header>
-        <a href="index.html"><img class="graficlogo" src="img/logo/logo.png" alt="logo"></a>
-        <input type="checkbox" id="nav-toggle" class="nav-toggle">
-        <nav>
-            <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="./O nas.html" target="_blank">BLOG</a></li>
-                <li><a href="./Sportové oblečenie.html" target="_blank"> ROZSAH</a></li>
-                <li><a href="./reg.html" target="_blank">REGISTRATION</a></li>
-            </ul>
-        </nav>
-        <label for="nav-toggle" class="nav-toggle-label">
-            <span></span>
-        </label>
-    </header>
+<?php include 'parts/header.php'?>
+
+
+
     <main>
         <div id="dv1">
             <h1>Mirillisshop.sk -je nový futbalový obchod s novou históriou a novým prístupom k práci so
@@ -77,24 +65,9 @@ s
         </div>
     </main>
 
-    <footer>
-        <div class="footer-nav">
-            <a href="index.html">HOME</a>
-            <a href="O nas.html">BLOG</a>
-            <a href="Sportové oblečenie.html">ROZSAH</a>
-            <a href="reg.html">REGISTRATION</a>
-        </div>
-        <div class="logo">
-            <a href="index.html"><img src="img/logo/logo.png"></a>
-        </div>
-        <div class="social">
-            <a href="#"><img src="img/image/m_1e61cef7d9.jpg"></a>
-            <a href="#"><img src="img/image/m_2f6ce99aa8.jpg"></a>
-            <a href="#"><img src="img/image/m_f016f1a07c.jpg"></a>
-            <a href="#"><img src="img/image/m_f8a463e0c3.jpg"></a>
-        </div>
-        <p>Artsiom Ladziata 2023</p>
-    </footer>
+<?php include 'parts/footer.php'?>
+
+
 
     <script src="js/skript.js"></script>
     <script src="js/menu.js"></script>
