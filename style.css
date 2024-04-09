@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+#dv1 {
+    background-color: black;
+    color: white;
+    width: 60%;
+    margin: auto;
+    border-radius: 10px;
+    border: black solid;
+    text-align: left;
+    padding: 15px;
+}
+
+main {
+    padding-top: 150px;
+}
+
+#dv1 p {
+    width: 600px;
+
+}
+
+#dv1 h2 {
+    padding-top: 50px;
+}
+
+#dv2 {
+    background-color: none;
+    color: black;
+    width: 60%;
+    margin: 5px auto;
+    border-radius: 10px;
+    border: black solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    height: 600px;
+
+}
+
+
+#dv2 a {
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    padding: 15px 50px;
+    text-decoration: none;
+}
+
+#dv2 a:hover {
+    background-color: black;
+}
+
+#dv2 p {
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    padding-left: 20%;
+    padding-left: 20%;
+    max-width: 350px;
+}
+
+@media (max-width: 768px) {
+    #dv2 {
+        width: 80%;
+    }
+
+    .gide_img {
+        width: 100%;
+        height: auto;
+    }
+
+
+}
+
+.social img {
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.gide_img {
+    text-align: center;
+    border-radius: 15px;
+    border: 2px solid black;
+    width: 300px;
+    height: 250px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.container .steps {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.steps .circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    color: #4a4747;
+    font-size: 22px;
+    font-weight: 700;
+    border-radius: 50%;
+    background: #fff;
+    border: 4px solid #4a4747;
+    transition: all 200ms ease;
+    transition-delay: 0s;
+}
+
+.steps .circle.active {
+    transition-delay: 100ms;
+    border-color: black;
+    color: black;
+}
+
+.steps .progress-bar {
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: #4a4747;
+    z-index: -1;
+}
+
+.progress-bar .indicator {
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: black;
+    transition: all 300ms ease;
+}
+
+.container .buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.buttons button {
+    padding: 8px 25px;
+    background: black;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    transition: all 200ms linear;
+}
+
+.buttons button:active {
+    transform: scale(0.97);
+}
+
+.buttons button:disabled {
+    background: white;
+    cursor: not-allowed;
+}
+
+footer {
+    width: 100%;
+    height: auto;
+    background: #000;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 25px;
+}
+
+.footer-nav p {
+    color: white;
+}
+
+.footer-nav a {
+    color: white;
+    font-size: 15px;
+    margin-left: 15px;
+    text-decoration: none;
+    transition: all .1s ease-in;
+}
+
+.logo img {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.footer-nav a:hover {
+    border-bottom: 2px solid white;
+}
+
+.social img {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    transition: all .5s ease;
+}
+
+.social img:hover {
+    scale: 1.1;
+}
+
+.Thankyou {
+    text-align: center;
+}
+
+.Thankyou h1 {
+    margin: 10px 0;
+    font-size: 110px;
+}
