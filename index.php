@@ -1,3 +1,14 @@
+<?php
+include 'db.php';
+
+$singles = get_all();
+
+foreach ($singles as $single) {
+    echo $single["title"];
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,15 +29,6 @@
 
 
 
-<?php
-include 'db.php';
-
-$singles = get_all();
-
-foreach ($singles as $single) {
-    echo $single["title"];
-}
-?>
 
 
     <main>

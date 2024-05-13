@@ -8,7 +8,7 @@ $password = "";
 
 $db = new PDO("mysql:host=$dbhost; dbname=$dbname", $username, $password);
 
-function get_albums() {
+function get_all() {
     global $db;
     $albums = $db->query("SELECT * FROM carousel");
     return $albums;
