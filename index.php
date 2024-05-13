@@ -18,6 +18,17 @@
 
 
 
+<?php
+include 'db.php';
+
+$singles = get_all();
+
+foreach ($singles as $single) {
+    echo $single["title"];
+}
+?>
+
+
     <main>
         <div id="dv1">
             <h1>Mirillisshop.sk -je nový futbalový obchod s novou históriou a novým prístupom k práci so
