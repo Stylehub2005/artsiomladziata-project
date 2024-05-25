@@ -8,51 +8,37 @@ $password = "";
 
 $db = new PDO("mysql:host=$dbhost; dbname=$dbname", $username, $password);
 
-function get_all() {
-    global $db;
-    $albums = $db->query("SELECT * FROM carousel");
-    return $albums;
-}
 
 
 function get_singles() {
     global $db;
-    $singles = $db->query("SELECT * FROM index.banner");
+    $singles = $db->query("SELECT * FROM banner");
     return $singles;
 }
 
-function get_videos(){
+function get_clients(){
     global $db;
-    $videos = $db->query("SELECT * FROM klient_sales.rozsah");
-    return $videos;
+    $clients = $db->query("SELECT * FROM klient_sales");
+    return $clients;
 }
 
-function get_career(){
+function get_shoes(){
     global $db;
-    $career = $db->query("SELECT * FROM nas_blog.blog");
-    return $career;
+    $shoes = $db->query("SELECT * FROM shoes1");
+    return $shoes;
 }
 
-function get_music_styles(){
+function get_shoes2(){
     global $db;
-    $music_style = $db->query("SELECT * FROM reg.reg");
-    return $music_style;
+    $shoes2= $db->query("SELECT * FROM shoes2");
+    return $shoes2;
 }
 
-function get_info_table(){
+function get_sales_shoes(){
     global $db;
-    $info_table = $db->query("SELECT * FROM rozsah.rozsah");
-    return $info_table;
-}
-function get_banners(){
-    global $db;
-    $banners = $db->query("SELECT * FROM sale.rozsah");
-    return $banners;
+    $sales_shoes = $db->query("SELECT * FROM rozsah_sale");
+    return $sales_shoes;
 }
 
-function subscribe_blog(){
-    global $db;
-    $banners = $db->query("SELECT * FROM subscribe.blog");
-    return $banners;
-}
+
 

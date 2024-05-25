@@ -33,7 +33,7 @@
             <input type="checkbox" id="genderCheckbox">
             <label for="genderCheckbox">Súhlas so spracovaním osobných údajov</label>
             <form action="submit_page.html" method="get">
-                <input formaction="thankyou.html" type="submit" value="Submit" class="button-submit">
+                <input formaction="thankyou.php" type="submit" value="Submit" class="button-submit">
             </form>
 
 

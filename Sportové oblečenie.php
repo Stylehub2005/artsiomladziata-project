@@ -15,6 +15,11 @@
 
 <body>
 <?php include 'parts/header.php'?>
+
+
+
+
+
     <main>
         <div class="table-container">
             <table>
@@ -24,24 +29,19 @@
                     <th>Vynaložené</th>
                     <th>Zľava</th>
                 </tr>
+                <?php
+                $clients = get_clients();
+                foreach ($clients as $client){?>
                 <tr>
-                    <td> 1</td>
-                    <td>Alex Kravchenko</td>
-                    <td>240$</td>
-                    <td>10%</td>
+                    <th><?php echo $client['ID']?></th>
+                    <th><?php echo $client['Meno']?></th>
+                    <th><?php echo $client['Vynaložené']?></th>
+                    <th><?php echo $client['Zľava']?></th>
                 </tr>
-                <tr>
-                    <td> 2</td>
-                    <td>Martin Bednarek</td>
-                    <td>220$</td>
-                    <td>5%</td>
-                </tr>
-                <tr>
-                    <td> 3</td>
-                    <td>Jakub Sol</td>
-                    <td>190$</td>
-                    <td>3%</td>
-                </tr>
+                <?php }; ?>
+
+
+
             </table>
         </div>
 
@@ -49,28 +49,18 @@
             <h2>SALE</h2>
         </div>
         <section class="cards">
+            <?php
+            $sales_shoes = get_sales_shoes();
+            foreach ($sales_shoes as $sales_shoe){?>
             <div class="card">
-                <img src="img/image/snimok-ekrana-2023-10-03-v-19.05.19-350x350.webp" alt="" img>
+                <img src="<?php echo $sales_shoe['IMG']?>" alt="" img>
                 <div class="card-content">
-                    <p>Nike Mercurial Vapor 15 AG-Pro</p>
-                    <p><s>130</s> 70$</p>
+                    <p><?php echo $sales_shoe['Name']?></p>
+                    <p><?php echo $sales_shoe['Price']?></p>
                 </div>
             </div>
-            <div class="card">
-                <img src="img/image/snimok-ekrana-2023-11-22-v-13.13.03-350x350.webp" alt="" img>
-                <div class="card-content">
-                    <p>Puma Ultimate MxSG</p>
-                    <p><s>140</s> 77$</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="img/image/snimok-ekrana-2023-11-22-v-20.46.14-350x350.webp" alt="" img>
-                <div class="card-content">
-                    <p>Puma Future Z 2.1 MG</p>
-                    <p><s>120</s> 90$</p>
+            <?php }; ?>
 
-                </div>
-            </div>
         </section>
 
 
@@ -80,28 +70,18 @@
             <h2>ROZSAH</h2>
         </div>
         <section class="cards">
-            <div class="card">
-                <img src="img/image/snimok-ekrana-2023-09-09-v-16.53.51-350x350.webp" alt="" img>
-                <div class="card-content">
-                    <p>Adidas Predator Freak.1 FG</p>
-                    <p> 115$</p>
+            <?php
+            $shoes = get_shoes();
+            foreach ($shoes as $shoe){?>
+                <div class="card">
+                    <img src="<?php echo $shoe['IMG']?>" alt="" img>
+                    <div class="card-content">
+                        <p><?php echo $shoe['Name']?></p>
+                        <p><?php echo $shoe['Price']?></p>
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <img src="img/image/snimok-ekrana-2023-05-24-v-16.49.54-350x350.webp" alt="" img>
-                <div class="card-content">
-                    <p>Nike Hypervenom Phantom III DF SG-Pro</p>
-                    <p>180$</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="img/image/snimok-ekrana-2023-05-24-v-15.48.49-350x350.webp" alt="" img>
-                <div class="card-content">
-                    <p>Nike Phantom GT DF Elite SG-Pro</p>
-                    <p> 150$</p>
+            <?php }; ?>
 
-                </div>
-            </div>
 
         </section>
 
@@ -109,28 +89,18 @@
 
 
         <section class="cards">
-            <div class="card">
-                <img src="img/image/snimok-ekrana-2023-10-03-v-19.05.19-350x350.webp" alt="" img>
-                <div class="card-content">
-                    <p>Nike Mercurial Vapor 15 AG-Pro</p>
-                    <p> 200$</p>
+            <?php
+            $shoes2 = get_shoes2();
+            foreach ($shoes2 as $shoe2){?>
+                <div class="card">
+                    <img src="<?php echo $shoe2['IMG']?>" alt="" img>
+                    <div class="card-content">
+                        <p><?php echo $shoe2['Name']?></p>
+                        <p><?php echo $shoe2['Price']?></p>
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <img src="img/image/snimok-ekrana-2023-10-22-v-14.02.48-350x350.webp" alt="" img>
-                <div class="card-content">
-                    <p>Nike Tiempo Legend 7</p>
-                    <p> 177$</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="img/image/snimok-ekrana-2023-11-22-v-13.13.03-350x350.webp" alt="" img>
-                <div class="card-content">
-                    <p>Puma Future Z 2.1 MG</p>
-                    <p> 185$</p>
+            <?php }; ?>
 
-                </div>
-            </div>
 
         </section>
 

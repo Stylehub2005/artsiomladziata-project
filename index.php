@@ -1,11 +1,7 @@
 <?php
 include 'db.php';
 
-$singles = get_all();
 
-foreach ($singles as $single) {
-    echo $single["title"];
-}
 ?>
 
 
@@ -32,16 +28,14 @@ foreach ($singles as $single) {
 
 
     <main>
+
         <div id="dv1">
-            <h1>Mirillisshop.sk -je nový futbalový obchod s novou históriou a novým prístupom k práci so
-                zákazníkmi</h1>
-            <p>Výsledok zápasu v profesionálnom futbale často závisí od kvality futbalových uniforiem, obuvi a
-                vybavenia. Na základe toho náš obchod ponúka iba oficiálne produkty populárnych značiek-Adidas, Nike,
-                Mizuno, Joma, Mníchov, Alphakeepers, Select, Joma.</p>
-            <h2>Sportová obuv vo výpredaji</h2>
-            <p>
-                Športová obuv, ktorá vám dodá štýl aj pohodlie. Od klasických tenisiek až po špeciálne bežecké topánky.
-                Máme všetko, čo potrebujete na aktívny životný štýl. Objavte u nás svoj štýl ešte dnes!</p>
+            <?php
+            $singles = get_singles();
+            foreach ($singles as $single){?>
+                <h1><?php echo $single["title"]?></h1>
+                <p><?php echo $single["text"]?></p>
+            <?php }; ?>
         </div>
         <h1 style="text-align: center; padding: 3% 5%;">Ako objednať tovar?</h1><br>
         <div id="dv2">

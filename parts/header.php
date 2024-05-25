@@ -1,4 +1,4 @@
-
+<?php require_once 'db.php'?>
 <header>
         <a href="index.php"><img class="graficlogo" src="img/logo/logo.png" alt="logo"></a>
         <input type="checkbox" id="nav-toggle" class="nav-toggle">
@@ -14,3 +14,4 @@
             <span></span>
         </label>
     </header>
+
