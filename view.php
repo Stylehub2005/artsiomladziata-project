@@ -25,27 +25,32 @@
         </thead>
         <tbody>
         <?php
-         include_once('db.php');
-        if (isset($conn)) {
-            $stmt = $conn->prepare("SELECT * FROM submissions");
-            $stmt->execute();
-            $submissions = $stmt->fetchAll();
 
-            foreach ($submissions as $submission) {
+
+        $contact_object = new Contact();
+        $contacts = $contact_object->select();
+
+        if ($contacts) {
+            foreach ($contacts as $contact) {
                 echo "<tr>";
-                echo "<td>{$submission['id']}</td>";
-                echo "<td>{$submission['name']}</td>";
-                echo "<td>{$submission['email']}</td>";
-                echo "<td>{$submission['phone']}</td>";
-                echo "<td>{$submission['message']}</td>";
-                echo "<td>
-                                <a href='edit.php?id={$submission['id']}'>Edit</a>
-                                <a href='delete.php?id={$submission['id']}'>Delete</a>
-                              </td>";
+                echo "<td>{$contact->id}</td>";
+                echo "<td>{$contact->name}</td>";
+                echo "<td>{$contact->email}</td>";
+                echo "<td>{$contact->phone}</td>";
+                echo "<td>{$contact->message}</td>";
+                echo '<td>
+                        <form action="delete.php" method="POST" style="display:inline;">
+                            <input type="hidden" name="id" value="'.$contact->id.'">
+                            <button type="submit" name="delete_contact">Delete</button>
+                        </form>
+                        <form action="edit.php" method="GET" style="display:inline;">
+                            <button type="submit" name="id" value="'.$contact->id.'">Edit</button>
+                        </form>
+                      </td>';
                 echo "</tr>";
             }
         } else {
-            echo "<tr><td colspan='6'>Database connection failed.</td></tr>";
+            echo "<tr><td colspan='6'>No submissions found.</td></tr>";
         }
         ?>
         </tbody>
@@ -57,6 +62,7 @@
 <script src="js/menu.js"></script>
 </body>
 </html>
+
 
 
 

@@ -1,12 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Submission</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 <?php
-include('db.php');
+include('parts/header.php');
+
+$contact = new Contact();
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
-    $stmt = $conn->prepare("SELECT * FROM submissions WHERE id = :id");
-    $stmt->bindParam(':id', $id, PDO::PARAM_INT);
-    $stmt->execute();
-    $submission = $stmt->fetch(PDO::FETCH_ASSOC);
+    $submission = $contact->get($id);
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -16,26 +22,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $phone = $_POST['phone'];
     $message = $_POST['text'];
 
-    $stmt = $conn->prepare("UPDATE submissions SET name = :name, email = :email, phone = :phone, message = :message WHERE id = :id");
-    $stmt->bindParam(':id', $id, PDO::PARAM_INT);
-    $stmt->bindParam(':name', $name, PDO::PARAM_STR);
-    $stmt->bindParam(':email', $email, PDO::PARAM_STR);
-    $stmt->bindParam(':phone', $phone, PDO::PARAM_STR);
-    $stmt->bindParam(':message', $message, PDO::PARAM_STR);
-    $stmt->execute();
+    $contact->update($id, $name, $email, $phone, $message);
 
     header("Location: view.php");
     exit;
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Edit Submission</title>
-    <link rel="stylesheet" href="style.css">
-</head>
 <body>
 <h1>Edit Submission</h1>
 <form action="edit.php" method="POST">

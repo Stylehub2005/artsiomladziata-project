@@ -3,7 +3,8 @@
         <a href="index.php">HOME</a>
         <a href="O nas.php">BLOG</a>
         <a href="Sportové oblečenie.php">ROZSAH</a>
-        <a href="reg.php">REGISTRATION</a>
+        <a href="reg.php">CONTACTS</a>
+        <a href="view.php">CRUD</a>
     </div>
     <div class="logo">
         <a href="index.php"><img src="img/logo/logo.png"></a>

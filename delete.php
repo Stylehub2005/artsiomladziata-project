@@ -1,12 +1,12 @@
 <?php
-include('db.php');
+include('parts/header.php');
 
-if (isset($_GET['id'])) {
-    $id = $_GET['id'];
 
-    $stmt = $conn->prepare("DELETE FROM submissions WHERE id = :id");
-    $stmt->bindParam(':id', $id, PDO::PARAM_INT);
-    $stmt->execute();
+$contact_object = new Contact();
+
+if (isset($_POST['delete_contact'])) {
+    $id = $_POST['id'];
+    $contact_object->delete($id);
 
     header("Location: view.php");
     exit;

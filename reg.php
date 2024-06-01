@@ -17,37 +17,37 @@
 
 <body>
 <?php include 'parts/header.php'?>
-    <main>
-        <div class="accordion-content" onclick="toggleAccordion(this)">
-            <h2 class="accordion">Kliknite a získajte zľavu</h2>
-            <div class="panel">
-                <p>Váš propagačný kód na zľavu: <strong>4473</strong></p>
-            </div>
+<main>
+    <div class="accordion-content" onclick="toggleAccordion(this)">
+        <h2 class="accordion">Kliknite a získajte zľavu</h2>
+        <div class="panel">
+            <p>Váš propagačný kód na zľavu: <strong>4473</strong></p>
         </div>
+    </div>
 
-        <form class="form" action="submit.php" method="POST">
-            <p><input type="text" name="name" class="feedback-input" placeholder="Name" required></p>
-            <p><input type="email" name="email" class="feedback-input" placeholder="Email" required></p>
-            <input type="tel" class="feedback-input" name="phone" placeholder="Cislo" required>
-            <p><textarea name="text" id="comment" class="feedback-input" placeholder="Message" required></textarea></p>
-            <input type="checkbox" id="genderCheckbox" required>
-            <label for="genderCheckbox">Súhlas so spracovaním osobných údajov</label>
-            <input type="submit" value="Submit" class="button-submit">
-        </form>
-
-
-
-        <div class="ease"></div>
-        </form>
-
-    </main>
-    <?php include 'parts/footer.php'?>
+    <form class="form" action="thankyou.php" method="POST">
+        <p><input type="text" name="name" class="feedback-input" placeholder="Name" required></p>
+        <p><input type="email" name="email" class="feedback-input" placeholder="Email" required></p>
+        <input type="tel" class="feedback-input" name="phone" placeholder="Cislo" required>
+        <p><textarea name="text" id="comment" class="feedback-input" placeholder="Message" required></textarea></p>
+        <input type="checkbox" id="genderCheckbox" required>
+        <label for="genderCheckbox">Súhlas so spracovaním osobných údajov</label>
+        <input type="submit" name="contact_submitted" value="Submit" class="button-submit" >
+    </form>
 
 
 
+    <div class="ease"></div>
+    </form>
 
-    <script src="js/skript.js"> </script>
-    <script src="js/accordion.js"> </script>
+</main>
+<?php include 'parts/footer.php'?>
+
+
+
+
+<script src="js/skript.js"> </script>
+<script src="js/accordion.js"> </script>
 </body>
 
 </html>
