@@ -25,19 +25,19 @@
             </div>
         </div>
 
-        <form class="form">
-            <p><input type="text" name="name" class="feedback-input" placeholder="Name"></p>
-            <p><input type="email" name="email" class="feedback-input" placeholder="Email"></p>
-            <input type="tel" class="feedback-input" name="phone" placeholder="Cislo">
-            <p><textarea name="text" id="comment" class="feedback-input" placeholder="Massage"></textarea></p>
-            <input type="checkbox" id="genderCheckbox">
+        <form class="form" action="submit.php" method="POST">
+            <p><input type="text" name="name" class="feedback-input" placeholder="Name" required></p>
+            <p><input type="email" name="email" class="feedback-input" placeholder="Email" required></p>
+            <input type="tel" class="feedback-input" name="phone" placeholder="Cislo" required>
+            <p><textarea name="text" id="comment" class="feedback-input" placeholder="Message" required></textarea></p>
+            <input type="checkbox" id="genderCheckbox" required>
             <label for="genderCheckbox">Súhlas so spracovaním osobných údajov</label>
-            <form action="submit_page.html" method="get">
-                <input formaction="thankyou.php" type="submit" value="Submit" class="button-submit">
-            </form>
+            <input type="submit" value="Submit" class="button-submit">
+        </form>
 
 
-            <div class="ease"></div>
+
+        <div class="ease"></div>
         </form>
 
     </main>
