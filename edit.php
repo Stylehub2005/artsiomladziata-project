@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>Edit Submission</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/menu.css">
+
+    <link rel="stylesheet" href="./css/edit.css">
 </head>
 <?php
 include('parts/header.php');
@@ -39,6 +42,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <p><textarea name="text" id="comment" class="feedback-input" placeholder="Message" required><?php echo htmlspecialchars($submission['message']); ?></textarea></p>
     <input type="submit" value="Update" class="button-submit">
 </form>
+<?php include 'parts/footer.php'?>
+<script src="js/skript.js"></script>
+<script src="js/menu.js"></script>
 </body>
 </html>
 

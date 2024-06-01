@@ -46,11 +46,20 @@ h1 {
 }
 
 
-header, footer {
+header{
     padding: 10px;
     background-color: #333;
     color: white;
     text-align: center;
+}
+
+footer {
+    width: 100%;
+    background: black;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
 }
 
 @media (max-width: 768px) {

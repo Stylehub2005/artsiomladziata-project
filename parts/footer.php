@@ -2,7 +2,7 @@
     <div class="footer-nav">
         <a href="index.php">HOME</a>
         <a href="O nas.php">BLOG</a>
-        <a href="Sportové oblečenie.php">ROZSAH</a>
+        <a href="sportove_oblecenie.php">ROZSAH</a>
         <a href="reg.php">CONTACTS</a>
         <a href="view.php">CRUD</a>
     </div>

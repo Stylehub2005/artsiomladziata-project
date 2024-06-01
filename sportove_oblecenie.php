@@ -23,7 +23,7 @@
 <main>
     <div class="table-container">
         <table>
-            
+
             <?php
             $clients = new Oblecenie();
             echo($clients->display_clients());
